@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Grid Practice</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="bg-dark">
+
+    <!-- <div class="container border  border-danger mt-3 p-3">
+        <div class="row p-2 border border-primary d-flex justify-content-center ">
+            <div class="col-12 col-lg-3 col-md-5 col-sm-4 text-center text-white border border-danger mb-3 ms-1 mt-2" id="box" >Box 1</div>
+             <div class="col-12 col-lg-3 col-md-5 col-sm-4 text-center text-white border border-danger mb-3 ml-3 ms-1 mt-2" id="box2" >Box 2</div>
+              <div class="col-12 col-lg-3 col-md-12 col-sm-4 text-center text-white border border-danger mb-3 ms-1 mt-2" id="box3">Box 3</div>
+        </div>
+    </div> -->
+<div class="container mt-4">
+  <div class="row" id="boxRow">
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+      <div class="p-4 bg-primary text-white text-center">Box 1</div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+      <div class="p-4 bg-success text-white text-center">Box 2</div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+      <div class="p-4 bg-danger text-white text-center">Box 3</div>
+    </div>
+  </div>
+</div>
+<div class="text-center mb-3">
+  <button class="btn btn-outline-primary" onclick="setCols(6)">2 Columns</button>
+  <button class="btn btn-outline-success" onclick="setCols(4)">3 Columns</button>
+  <button class="btn btn-outline-danger" onclick="setCols(12)">1 Column</button>
+</div>
+
+ <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+ <script>
+  function setCols(colSize) {
+    const columns = document.querySelectorAll("#boxRow > div");
+
+    columns.forEach(col => {
+      col.className = `col-${colSize} mb-3`;
+    });
+  }
+</script>
+
+ </script>
+</body>
+</html>
