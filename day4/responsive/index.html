@@ -5,15 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        header:nth-child(1){
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 700;
+            color: white;
+        }
+        .sidebar {
+            height: 250px;             /* default width */
+            transition: all 1s;       /* smooth transition for width, opacity, padding */
+            overflow: hidden;
+    }
+
+    .sidebar.hide {
+        width: 0;
+        opacity: 0;
+        padding: 0;
+    }
+
+    </style>
 </head>
 <body class="bg-dark">
-    <header class="container-fluid">
+    <header class="container-fluid bg-primary p-3 text-center">
         <h1>BootStrap</h1>
     </header>
-    <main class="container">
-
+    <main class="container-fluid bg-danger mt-5 p-0">
+        <div class="row" >
+            <div class="col-lg-2 col-md-2 bg-success text-center col-sm-12 " id="btns">
+                <div class="icon d-block d-lg-none d-md-none" >
+                    <button class="bg-primary mt-2 border rounded-3 border-0 p-2 mb-4" id="Btn">Show Sidebar</button>
+                </div>
+                <aside id="side_bar" class="d-none d-md-block">
+                    <ol class="text-white list-unstyled mt-3">
+                        <li class="mt-2 mb-2">Users</li>
+                        <li class="mt-2 mb-2">Admin</li>
+                        <li class="mt-2 mb-2">Hello</li>
+                    </ol>
+            </aside>
+            </div>
+            <article class="col-12 col-lg-10 col-md-10 ">
+                <p class="text-white text-center text-md-start text-lg-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit obcaecati nulla debitis? Vero et ipsam minus fuga inventore possimus quo laboriosam, modi veniam sapiente fugit sunt minima quis magnam non, obcaecati harum nostrum ab consequatur! Ipsum, excepturi assumenda, minus optio possimus alias cupiditate veniam suscipit deserunt iure impedit nulla adipisci inventore ad sunt odio nisi dolor, expedita nihil neque vitae veritatis quo fuga cum! Ducimus ad quaerat sequi perspiciatis repellat assumenda et alias delectus! Deserunt illum officiis harum fugiat minus placeat, quasi deleniti laudantium voluptates quia nisi doloribus facere modi odio sint dolorem a, iure omnis animi voluptate? Provident, nostrum quam a omnis ipsum, eius quaerat dicta inventore neque necessitatibus iusto reiciendis facilis obcaecati repudiandae repellat veniam est similique expedita qui alias tempora perferendis possimus nesciunt! Quod eveniet quae voluptatem nam commodi veniam porro nulla debitis esse est odio sint rem magni, quisquam inventore dolor quis numquam fugiat iure officia voluptatum ex. Est quasi qui, rerum illo perferendis dolore iure commodi eos dicta, repellendus quo adipisci a, expedita minus quam nihil architecto provident accusamus labore numquam esse quia modi? A excepturi velit rerum, aspernatur illo eum dicta nostrum voluptates. Omnis, facilis delectus minima provident ut nulla? Ratione vel iusto, et omnis placeat magnam tempora officia? Quasi ut officiis consequuntur molestiae quis quam ipsam quos nisi, velit iusto assumenda numquam rerum asperiores excepturi possimus eligendi minus! Sequi quod at numquam laboriosam doloribus minus distinctio dolor debitis laborum dolores voluptas quae deserunt neque, sunt dicta eveniet ex quo ullam nemo quasi consectetur vel eos! Error eum eos reprehenderit necessitatibus neque velit nemo impedit quasi debitis quam accusantium veritatis expedita ullam quia, earum dolorem explicabo vero vitae. Excepturi dignissimos optio beatae deleniti nisi ad facere reprehenderit eligendi nobis veniam magni asperiores inventore, tempore libero modi nesciunt. Quibusdam itaque autem a, accusamus officia deserunt.</p>
+            </article>
+            
+        </div>
+        
     </main>
  <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+ <script src="node_modules/bootstrap-icons/font/bootstrap-icons.css"></script>
+ <script>
+    const Btn=document.querySelector("#Btn");
+    const side_bar=document.querySelector("#side_bar")
+    const side=document.querySelector("#btns")
+    Btn.addEventListener("click", function() { 
+    side_bar.classList.toggle("d-none");
+    if (side_bar.classList.contains("d-none")) {
+        Btn.textContent = "Show Sidebar";
+        Btn.className = "btn btn-primary mt-2 mb-4";
+    } else {
+        Btn.textContent = "Hide Sidebar";
+        Btn.className = "btn btn-danger mt-2 mb-4";
+    }
+})
+
+    
+    
+ </script>
 </body>
 </body>
 </html>
