@@ -5,10 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
-    <style></style>
+    <style>
+        body{
+         background-color: lightgreen;   
+        }
+    header{
+        background: linear-gradient(to right, pink, blue);
+    }
+    #Heading{
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 50px;
+        font-weight: 900;
+    }
+    .Div{
+        background-color: crimson;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 6px 9px 20px rgb(97, 88, 88);
+    }
+
+    img{
+        width:200px;
+        margin-top: 10px;
+        border-radius: 50% ;
+        height: 150px;
+        
+    }
+    .Name{
+        color: white;
+        font-weight: bolder;
+        letter-spacing: 3px;
+        margin-top: 5px;
+        text-align: center;
+    }
+    .info{
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        
+    }
+    .fol{
+        margin-left: 10px;
+        color: rgb(0, 255, 0);
+        font-size: 25px;
+
+    }
+    .Bio{
+        margin-left: 10px;
+        margin-top: 5px;
+        color: white;
+        text-decoration: solid;
+        font-size: 20px;
+    }
+    .btn{
+        background-color: aqua;
+    }
+    .btn:hover{
+        background-color: white;
+        transition: background-color .3s ease-in-out;
+    }
+    .btn:active{
+         transform: scale(1.1);
+         background-color: white;
+    }
+    .btn:focus{
+        background-color: rgb(12, 191, 235);
+        transition: background-color .5s linear;
+
+    }
+    </style>
 </head>
 <body>
-    
+    <header class="container-fluid text-center p-4 text-md-start">
+        <h1 class="" id="Heading">DashBoard</h1>
+    </header>
+
+    <main class="container-fluid">
+        <div class="row mt-2 d-flex align-items-center justify-content-center gap-4" id="row">
+           
+        </div>
+    </main>
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
