@@ -1,0 +1,35 @@
+
+:root{
+    --color: white;
+}
+
+.header{
+    background-color: var(	
+--bs-info);
+border-bottom: 2px solid darkblue;
+box-shadow: 3px 3px 3px darkcyan;
+}
+.h1_heading{
+    color:var(--color);
+    font-family: fantasy;
+    letter-spacing: 2px;
+    font-size: 3rem;
+}
+.h1_heading:hover{
+    color: greenyellow;
+    cursor: pointer;
+    transition: all .5s;
+    transform: scale(1.5 , 1.5);
+}
+
+.main{
+    background-color: var(--bs-info-bg-subtle);
+}
+
+
+.card-title{
+    color: var(--bs-info);
+}
+.card{
+    width: 60%;
+}
