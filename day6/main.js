@@ -14,7 +14,7 @@ function handleUser(data) {
      const cardCol = document.createElement("div")
       cardCol.className = "col-12 col-sm-8 col-md-4 p-3 card_div";
 
-      // Fill the card with user data
+      
       cardCol.innerHTML = `
         <div class="card h-100">
           <img 
